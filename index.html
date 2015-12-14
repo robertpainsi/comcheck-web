@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>comcheck</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="widget/octicons/octicons.css">
+    <link rel="stylesheet" type="text/css" href="widget/comcheck-widget.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+
+<div style="display: flex; flex-direction: column;">
+    <div style="margin: auto">
+        <h1>Commit Message</h1>
+
+        <div class="commit-field"></div>
+
+        <h1>Commit Message Checks</h1>
+
+        <div>
+            <table class="table table-striped table-hover ">
+                <thead>
+                <tr>
+                    <th>Violation</th>
+                    <th>Fix</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Line isn't indented correctly</td>
+                    <td>
+                        <pre class="fix">- Use a hanging<br><span class="correct">  </span>indent</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Remove delimiter at the end of the header</td>
+                    <td>
+                        <pre class="fix">This is not correct<span class="wrong">!</span></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Use imperative form</td>
+                    <td>
+                        <pre class="fix">Avoid<span class="wrong">ed</span> past form</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Only use a single space character</td>
+                    <td>
+                        <pre class="fix">Too<span class="wrong">   </span>many spaces or even a<span class="wrong">&#09;</span>tab.</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Wrong ticket prefix</td>
+                    <td>
+                        <pre class="fix"><span class="correct">CAT-1234 </span>Fix…</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Remove unnecessary newline</td>
+                    <td>Replace multiple empty newlines by a single one.</td>
+                </tr>
+                <tr>
+                    <td>Remove rebasing commit</td>
+                    <td>A rebase commit is always a lack of understanding rebasing.<br>
+                        Please reread
+                        <a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-commit--amend" target="_blank">articles</a> about rebasing.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Start header title with upper case<br>Start paragraph with upper case</td>
+                    <td>
+                        <pre class="fix"><span class="correct">A</span>lways start<br><br><span class="wrong">p</span>aragraphs with an uppercase letter</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Header exceeds 69 characters<br>
+                        Line exceeds 72 characters<br>
+                        Missing body<br>
+                        Separate body from header by an empty newline<br>
+                        Empty line contains whitespaces<br>
+                        Line starts with whitespaces<br>
+                        Line ends with whitespaces<br>
+                        Improve commit message
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h1>Resources</h1>
+
+        <div>
+            <table class="table table-striped table-hover ">
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html" target="_blank">A Note About Git Commit Messages</a>
+                    </td>
+                    <td>
+                        <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html" target="_blank">tbaggery.com</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="http://chris.beams.io/posts/git-commit" target="_blank">How to Write a Git Commit Message</a>
+                    </td>
+                    <td>
+                        <a href="http://chris.beams.io/posts/git-commit" target="_blank">chris.beams.io</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://wiki.openstack.org/wiki/GitCommitMessages" target="_blank">Git Commit Good Practice</a>
+                    </td>
+                    <td>
+                        <a href="https://wiki.openstack.org/wiki/GitCommitMessages" target="_blank">wiki.openstack.org</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h1>Quotes</h1>
+
+        <div class="quotes">
+            <blockquote>
+                <p>The difference between a tolerable programmer and a great programmer is not how many programming languages they know, and it’s not whether they prefer Python or Java. It’s whether they can communicate their ideas... By writing clear comments and technical specs, they let other programmers understand their code, which means other programmers can use and work with their code instead of rewriting it. Absent this, their code is worthless. By writing clear technical documentation for end users, they allow people to figure out what their code is supposed to do, which is the only way those users can see the value in their code.</p>
+                <small><cite>Joel Spolsky</cite></small>
+            </blockquote>
+
+            <blockquote class="blockquote-reverse">
+                <p>Re-establishing the context of a piece of code is wasteful. We can't avoid it completely, so our efforts should go to reducing it [as much] as possible. Commit messages can do exactly that and as a result, a commit message shows whether a developer is a good collaborator.</p>
+                <small><cite>Peter Hutterer</cite></small>
+            </blockquote>
+        </div>
+
+        <h1>GitHub</h1>
+
+        <div class="bs-component">
+            <div class="well">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <legend>Configuration</legend>
+                        <div class="form-group">
+                            <div class="xxx">
+                                <input type="text" class="form-control" id="repository" placeholder="Catrobat/Catroid" pattern="[A-Za-z]{3}">
+                            </div>
+                        </div>
+                        <div style="display: flex;">
+                            <div style="width: 20%;">
+                                <select class="form-control" id="select" style="border-bottom-right-radius: 0; border-top-right-radius: 0; border-right: 0">
+                                    <option value="branch">Branch</option>
+                                    <option value="pull-request">Pull Request</option>
+                                    <option value="commit">Commit</option>
+                                </select>
+                            </div>
+                            <div style="width: 70%; margin-right: 15px">
+                                <input type="text" class="form-control" id="various" placeholder="develop" style="border-bottom-left-radius: 0; border-top-left-radius: 0;">
+                            </div>
+                            <button id="check-button" type="submit" class="btn btn-primary" style="margin-left: auto">Check</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="commits-container"></div>
+    </div>
+</div>
+
+<script src="libs/pnglib.js"></script>
+<script src="libs/identicon.js"></script>
+<script src="libs/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="libs/autosize.min.js"></script>
+<script src="libs/comcheck.js"></script>
+
+<script src="widget/comcheck-widget.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+.flex {
+    display: flex;
+}
+
+.commit {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.commit-details {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.committer-avatar {
+    margin-right: 0.32em;
+}
+
+.committer-name {
+    font-weight: bold;
+}
+
+.report-bug {
+    font-size: 14px;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+.commit-message {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+.commit-message-textarea {
+    resize: none;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.commit-message-preview {
+    width: 633px;
+    border-width: 0 0 1px 0;
+    background-color: transparent;
+    padding: 6px 13px 7px 13px;
+    margin-bottom: 0;
+    -webkit-user-select: text;
+    border-radius: 0;
+    white-space: pre;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .commit-message-textarea {
+        white-space: pre !important;
+    }
+}
+
+.commit-tab-text {
+    margin-top: 2em;
+}
+
+.changes {
+    font-weight: bold;
+}
+
+.changes::after {
+    content: "*";
+}
+
+.badge-preview-errors {
+    background-color: #db0000 !important;
+}
+
+.badge-internal-errors {
+    background-color: #db0000 !important;
+}
+
+.tab-content {
+    display: flex;
+}
+
+.tab-content-background {
+    min-width: 655px;
+    min-height: 95px;
+    background-color: #fff;
+    padding: 10px 26px 10px 0;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.line-numbers {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    min-width: 26px;
+}
+
+.line-number {
+    color: #bbb;
+    display: block;
+    text-align: right;
+    padding-right: 7px;
+}
+
+.line-number:hover {
+    text-decoration: none;
+}
+
+.line-number[data-skip='true'] {
+    background-color: #ddd;
+}
+
+.commit-message-header {
+    font-weight: bold;
+    color: #4e575b;
+}
+
+.commit-message-line {
+    color: #596063;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.auto-format {
+    font-size: 12px;
+    line-height: 22px;
+    text-align: right;
+    margin-top: 7px !important;
+    margin-bottom: 1px !important;
+}
+
+.error.count1 {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.error.count2 {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+.error.count3 {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.success-tooltip {
+    background-color: #dff0d8 !important;
+    border-color: #dff0d8 !important;
+    color: #3c763d !important;
+}
+
+.error-tooltip {
+    background-color: #f2dede !important;
+    border-color: #ebccd1 !important;
+    color: #a94442 !important;
+}
+
+.blink-error {
+    animation: blink 2s infinite, wiggle 2s infinite;
+}
+
+/*
+@keyframes blink {
+    0% {
+        color: #337ab7;
+    }
+    49% {
+        color: #337ab7;
+    }
+    50% {
+        color: #db0000;
+    }
+    72% {
+        color: #db0000;
+    }
+    73% {
+        color: #337ab7;
+    }
+}
+*/
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    55% {
+        transform: rotate(-18deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    65% {
+        transform: rotate(18deg);
+    }
+    70% {
+        transform: rotate(0deg);
+    }
+}
+
+.skip {
+    color: #8a9499;
+}
+
+.quotes {
+    width: 727px;
+    margin: auto;
+}
+
+.quotes > blockquote {
+    font-size: 1em !important;
+}

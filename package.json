@@ -1,0 +1,14 @@
+{
+  "name": "comcheck-web",
+  "version": "0.0.1",
+  "description": "",
+  "main": "comcheck.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "comcheck": "file:../../comcheck"
+  },
+  "devDependencies": {
+    "gulp-browserify": "^0.5.1"
+  }
+}

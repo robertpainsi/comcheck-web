@@ -1,0 +1,25 @@
+.commits-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#select:focus {
+    border-right: 1px solid #66afe9 !important;
+}
+
+.correct {
+    background-color: #b7ffb4;
+}
+
+.wrong {
+    background-color: #ffaeac;
+}
+
+pre.fix {
+    margin-bottom: 0;
+}
+
+.xxx {
+    margin-left: 15px;
+    margin-right: 15px;
+}
